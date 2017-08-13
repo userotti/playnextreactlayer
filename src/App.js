@@ -6,6 +6,7 @@ import { setMenuDrawerState  } from './actions/uiStateActions'
 import MenuBurgerButton from './components/MenuBurgerButton';
 import MenuDrawer from './components/MenuDrawer';
 import InfoBar from './components/InfoBar';
+import HomeButton from './components/HomeButton';
 
 
 @connect((store)=>{
@@ -35,6 +36,9 @@ class App extends Component {
 
                 <MenuBurgerButton>
                 </MenuBurgerButton>
+
+                <HomeButton>
+                </HomeButton>
 
                 <InfoBar>
                 </InfoBar>

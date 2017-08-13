@@ -10,3 +10,9 @@ export function setMenuDrawerState(open) {
         payload: open
     }
 }
+
+export function gotoHome() {
+    return {
+        type: 'SET_MENU_DRAWER_STATE_UISTATE',
+    }
+}
