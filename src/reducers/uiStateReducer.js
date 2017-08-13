@@ -19,16 +19,7 @@ export default function reducer(state={
                     }}
             }
 
-            case "ON_MENU_TOGGLE":{
-                return {
-                    ...state,
-                    menuState: {
-                        ...state.menuState,
-                        menuOpen: !state.menuState.menuOpen,
-                    }}
-            }
-
-            case "SET_MENU_STATE":{
+            case "SET_MENU_DRAWER_STATE_UISTATE":{
                 return {
                     ...state,
                     menuState: {

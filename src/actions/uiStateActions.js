@@ -4,9 +4,9 @@ export function toggleMenu() {
     }
 }
 
-export function setMenuState(open) {
+export function setMenuDrawerState(open) {
     return {
-        type: 'SET_MENU_STATE',
+        type: 'SET_MENU_DRAWER_STATE_UISTATE',
         payload: open
     }
 }
