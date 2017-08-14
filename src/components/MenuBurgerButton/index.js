@@ -1,7 +1,9 @@
 import styled from 'styled-components';
 import { connect } from 'react-redux';
 import React, { Component } from 'react';
-import { setMenuDrawerState  } from '../../actions/uiStateActions'
+import { setMenuDrawerState  } from '../../actions/uiStateActions';
+import { setHomeButtonVisibility  } from '../../actions/uiStateActions';
+
 
 const StyledMenuButton = styled.div`
     font-size: 30px;
@@ -25,11 +27,14 @@ export default class MenuBurgerButton extends Component {
 
 
     toggleMenu() {
-        this.props.dispatch(setMenuDrawerState(!this.props.uiState.menuState.menuOpen))
+        this.setMenuState(!this.props.uiState.menuState.menuOpen)
     }
 
     setMenuState(open) {
+
         this.props.dispatch(setMenuDrawerState(open))
+        this.props.dispatch(setHomeButtonVisibility(!open))
+
     }
 
     render() {

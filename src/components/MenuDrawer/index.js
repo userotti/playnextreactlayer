@@ -1,7 +1,10 @@
 import styled from 'styled-components';
 import { connect } from 'react-redux'
 import React, { Component } from 'react'
-import { setMenuDrawerState  } from '../../actions/uiStateActions'
+import { setMenuDrawerState } from '../../actions/uiStateActions'
+import { setHomeButtonVisibility } from '../../actions/uiStateActions'
+
+
 import Drawer from 'react-motion-drawer';
 
 
@@ -32,13 +35,16 @@ class MenuDrawer extends Component {
     }
 
     setMenuState(open) {
+
         this.props.dispatch(setMenuDrawerState(open))
+        this.props.dispatch(setHomeButtonVisibility(!open))
+
     }
 
     render() {
 
-        const { menuState } = this.props;
         console.log("this.props: ", this.props);
+        const { menuState } = this.props;
         const drawerProps = {
             overlayColor: "rgba(123,123,123,0.6)",
             handleWidth: 0,

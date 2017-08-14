@@ -16,3 +16,10 @@ export function gotoHome() {
         type: 'SET_MENU_DRAWER_STATE_UISTATE',
     }
 }
+
+export function setHomeButtonVisibility(show) {
+    return {
+        type: 'SET_HOME_BUTTON_VISIBILITY',
+        payload: show
+    }
+}

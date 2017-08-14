@@ -31,17 +31,21 @@ export default class HomeButton extends Component {
     }
 
     render() {
-        return (
 
-            <StyledHomeButton
-                onClick={() =>
-                    this.gotoHome()
-                }
-                >
-                    <i class="fa fa-home"></i>
+        if (this.props.uiState.homeButtonState.show) {
+            return (
+                <StyledHomeButton
+                    onClick={() =>
+                        this.gotoHome()
+                    }
+                    >
+                        <i class="fa fa-home"></i>
 
-            </StyledHomeButton>
+                </StyledHomeButton>
+            )
+        } else {
+            return null;
+        }
 
-        )
     }
 }

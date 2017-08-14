@@ -1,34 +1,13 @@
-export default function reducer(state={
-        dimentions: {
-            width: window.innerWidth,
-            height: window.innerHeight,
-        },
-        menuState: {
-            menuOpen: false,
-            openWidth: 300
-        }
-    }, action) {
+import { combineReducers } from 'redux';
 
-        switch (action.type) {
-            case "ON_RESIZE_EVENT":{
-                return {
-                    ...state,
-                    dimentions: {
-                        width: action.payload.width,
-                        height: action.payload.height,
-                    }}
-            }
+import menuState from "./menuStateReducer"
+import dimention from "./dimentionReducer"
+import homeButtonState from "./homeButtonStateReducer"
 
-            case "SET_MENU_DRAWER_STATE_UISTATE":{
-                return {
-                    ...state,
-                    menuState: {
-                        ...state.menuState,
-                        menuOpen: action.payload,
-                    }}
-            }
-        }
 
-        return state
 
-}
+export default combineReducers({
+    menuState,
+    dimention,
+    homeButtonState
+})
