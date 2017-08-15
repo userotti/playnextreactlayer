@@ -8,15 +8,15 @@ const StyledHomeButton = styled.div`
     font-size: 30px;
     background: #000;
     color: #eee;
-    padding: 3px 5px;
     border-radius: 3px;
     top: 0px;
     right: 0px;
     width: 50px;
     height: 50px;
     text-align: center;
-    line-height: 45px;
-    margin: 5px;
+    line-height: 50px;
+    margin: 10px; 
+
 `
 
 @connect((store)=>{

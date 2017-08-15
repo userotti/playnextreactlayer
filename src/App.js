@@ -7,6 +7,17 @@ import MenuBurgerButton from './components/MenuBurgerButton';
 import MenuDrawer from './components/MenuDrawer';
 import InfoBar from './components/InfoBar';
 import HomeButton from './components/HomeButton';
+import styled from 'styled-components';
+
+import bgImg from '../assets/loadingbg.jpg' // relative path to image
+
+
+const ContainerDiv = styled.div`
+    width: 100%;
+    height: 100vh;
+    background: url(${ bgImg })
+
+`
 
 
 @connect((store)=>{
@@ -30,7 +41,8 @@ class App extends Component {
 
     render() {
         return (
-            <div>
+            <ContainerDiv>
+                {/* <img src={bgImg}/> */}
                 <MenuDrawer>
                 </MenuDrawer>
 
@@ -42,7 +54,7 @@ class App extends Component {
 
                 <InfoBar>
                 </InfoBar>
-            </div>
+            </ContainerDiv>
         );
     }
 }

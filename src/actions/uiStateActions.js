@@ -6,18 +6,25 @@ export function toggleMenu() {
 
 export function setMenuDrawerState(open) {
     return {
-        type: 'SET_MENU_DRAWER_STATE_UISTATE',
+        type: 'SET_MENU_DRAWER_STATE',
         payload: open
     }
 }
 
 export function gotoHome() {
     return {
-        type: 'SET_MENU_DRAWER_STATE_UISTATE',
+        type: 'GOTO_HOME',
     }
 }
 
 export function setHomeButtonVisibility(show) {
+    return {
+        type: 'SET_HOME_BUTTON_VISIBILITY',
+        payload: show
+    }
+}
+
+export function setMenuButtonVisibility(show) {
     return {
         type: 'SET_HOME_BUTTON_VISIBILITY',
         payload: show

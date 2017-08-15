@@ -1,33 +1,48 @@
 import styled from 'styled-components';
-import { connect } from 'react-redux'
-import React, { Component } from 'react'
+import { connect } from 'react-redux';
+import React, { Component } from 'react';
+import MenuItem from '../MenuItem';
 
 const StyledMenuList = styled.ul`
     list-style:none;
-    position:relative;
-    float:left;
-    margin:0;
-    padding:0;
+
 `
+
+const StyledMenuItem = styled.li`
+    color: #1FA4E2;
+    padding: 10px 10px;
+    font-size: 20px;
+
+
+`
+
 
 @connect((store)=>{
     return {
-        uiState: store.uiState
+        menuState: store.uiState.menuState
     };
 })
 export default class Menu extends Component {
 
     render(){
 
-        const { menuItems }
+        const { menuItems } = this.props.menuState
 
-        <StyledMenuList>
-            {
-             this.props.menuItems.map((item, index) => (
-                 <MenuItem item={item} onClick={(e) => this.onItemClick(e, item)} }/>
-             ))
-            }
-        </StyledMenuList>
+        console.log("menuItems:", menuItems);
+        return (
+
+            <StyledMenuList>
+                {
+
+                 menuItems.map((item, index) => {
+                     return <StyledMenuItem key={index} onClick={(e) => this.onItemClick(e, item)}>
+                         <img/> { item.label }
+                     </StyledMenuItem>
+                 })
+                }
+            </StyledMenuList>
+
+        )
 
     }
 

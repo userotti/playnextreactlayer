@@ -6,16 +6,19 @@ import { setHomeButtonVisibility  } from '../../actions/uiStateActions';
 
 
 const StyledMenuButton = styled.div`
+    position: fixed;
+    cursor: pointer;
     font-size: 30px;
     background: #000;
     color: #eee;
-    padding: 3px 5px;
+    top: 0px;
+    left: 0px;
     border-radius: 3px;
     width: 50px;
     height: 50px;
     text-align: center;
-    line-height: 45px;
-    margin: 5px;
+    line-height: 50px;
+    margin: 10px; 
 `
 
 @connect((store)=>{

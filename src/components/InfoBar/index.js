@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import React, { Component } from 'react';
 
 const StyledInfoBar = styled.div`
+    box-sizing: border-box;
     position: fixed;
     background: rgba(0,0,0,0.5);
     color: #eee;
@@ -10,7 +11,7 @@ const StyledInfoBar = styled.div`
     bottom: 0;
     left: 0;
     width: 100%;
-    padding: 20px 20px;
+    padding: 20px;
     text-align: right;
 `
 @connect((store)=>{
