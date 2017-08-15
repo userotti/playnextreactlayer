@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import React, { Component } from 'react';
 import { setMenuDrawerState  } from '../../actions/uiStateActions';
 import { setHomeButtonVisibility  } from '../../actions/uiStateActions';
+import { toggleMenuAndHideButtons } from '../../actions/uiStateActions';
 
 
 const StyledMenuButton = styled.div`
@@ -18,40 +19,42 @@ const StyledMenuButton = styled.div`
     height: 50px;
     text-align: center;
     line-height: 50px;
-    margin: 10px; 
+    margin: 10px;
 `
 
 @connect((store)=>{
     return {
-        uiState: store.uiState
+        menuState: store.uiState.menuState
     };
 })
 export default class MenuBurgerButton extends Component {
 
 
     toggleMenu() {
-        this.setMenuState(!this.props.uiState.menuState.menuOpen)
+        this.setMenuState(!this.props.menuState.menuOpen)
     }
 
     setMenuState(open) {
 
-        this.props.dispatch(setMenuDrawerState(open))
-        this.props.dispatch(setHomeButtonVisibility(!open))
+        this.props.dispatch(toggleMenuAndHideButtons(open))
 
     }
 
     render() {
-        return (
+        if (this.props.menuState.showMenuButton) {
+            return (
+                <StyledMenuButton
+                    onClick={() =>
+                        this.toggleMenu()
+                    }
+                    >
+                        <i class="fa fa-bars"></i>
+                </StyledMenuButton>
+            )
+        } else {
+            return null;
+        }
 
-            <StyledMenuButton
-                onClick={() =>
-                    this.toggleMenu()
-                }
-                >
-                    <i class="fa fa-bars"></i>
 
-            </StyledMenuButton>
-
-        )
     }
 }

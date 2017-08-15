@@ -11,6 +11,13 @@ export default function reducer(state={
                     show: action.payload
                 }
             }
+
+            case "TOGGLE_MENU_AND_HIDE_BUTTONS":{
+                return {
+                    ...state,
+                    show: !action.payload,
+                }
+            }
         }
 
         return state

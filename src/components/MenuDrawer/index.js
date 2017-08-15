@@ -1,11 +1,10 @@
 import styled from 'styled-components';
 import { connect } from 'react-redux'
 import React, { Component } from 'react'
-import { setMenuDrawerState } from '../../actions/uiStateActions'
-import { setHomeButtonVisibility } from '../../actions/uiStateActions'
-import Drawer from 'react-motion-drawer'
+import { toggleMenuAndHideButtons } from '../../actions/uiStateActions'
 
 import Menu from './Menu';
+import Drawer from 'react-motion-drawer'
 
 
 const MenuHeading = styled.h2`
@@ -36,13 +35,14 @@ class MenuDrawer extends Component {
 
 
     toggleMenu() {
-        this.props.dispatch(setMenuDrawerState(!this.props.menuState.menuOpen))
+
+        this.props.dispatch(toggleMenuAndHideButtons(!this.props.menuState.menuOpen))
+
     }
 
     setMenuState(open) {
 
-        this.props.dispatch(setMenuDrawerState(open))
-        this.props.dispatch(setHomeButtonVisibility(!open))
+        this.props.dispatch(toggleMenuAndHideButtons(open))
 
     }
 
@@ -50,10 +50,10 @@ class MenuDrawer extends Component {
 
         const { menuState } = this.props;
         const drawerProps = {
-            overlayColor: "rgba(123,123,123,0.3)",
+            overlayColor: "rgba(0,0,0,0.3)",
             handleWidth: 0,
             drawerStyle: {
-                background: "rgba(0,0,0,0.7)",
+                background: "rgba(0,0,0,0.8)",
                 boxShadow: "rgba(0, 0, 0, 0.188235) 0px 10px 20px, rgba(0, 0, 0, 0.227451) 0px 6px 6px",
                 'paddingRight': '0px'
             }

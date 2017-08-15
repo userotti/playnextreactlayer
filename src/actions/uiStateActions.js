@@ -30,3 +30,10 @@ export function setMenuButtonVisibility(show) {
         payload: show
     }
 }
+
+export function toggleMenuAndHideButtons(showMenu) {
+    return {
+        type: 'TOGGLE_MENU_AND_HIDE_BUTTONS',
+        payload: showMenu
+    }
+}
