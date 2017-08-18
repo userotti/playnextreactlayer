@@ -37,3 +37,17 @@ export function toggleMenuAndHideButtons(showMenu) {
         payload: showMenu
     }
 }
+
+export function toggleSettingsSceneVisibility(payload) {
+    return {
+        type: 'TOGGLE_SETTING_SCENE_VISIBLE',
+        payload: payload
+    }
+}
+
+export function menuItemTapped(menuItemActionType, payload) {
+    return {
+        type: menuItemActionType,
+        payload: payload
+    }
+}

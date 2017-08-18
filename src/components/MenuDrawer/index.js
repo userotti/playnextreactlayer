@@ -63,6 +63,7 @@ class MenuDrawer extends Component {
 
             <CustomMenuDrawer
                 {...drawerProps}
+                zIndex={2}
                 width={menuState.openWidth}
                 fadeOut={false}
                 open={menuState.menuOpen}

@@ -6,11 +6,9 @@ export default function reducer(state={
         switch (action.type) {
             case "ON_RESIZE_EVENT":{
                 return {
-                    ...state,
-                    dimentions: {
-                        width: action.payload.width,
-                        height: action.payload.height,
-                    }}
+                    width: action.payload.width,
+                    height: action.payload.height,
+                }
             }
         }
 

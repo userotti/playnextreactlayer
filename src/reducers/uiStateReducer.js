@@ -1,13 +1,14 @@
 import { combineReducers } from 'redux';
 
 import menuState from "./menuStateReducer"
-import dimention from "./dimentionReducer"
+import dimentions from "./dimentionsReducer"
 import homeButtonState from "./homeButtonStateReducer"
-
+import settingsSceneState from "./settingsSceneStateReducer"
 
 
 export default combineReducers({
     menuState,
-    dimention,
-    homeButtonState
+    dimentions,
+    homeButtonState,
+    settingsSceneState
 })

@@ -9,6 +9,11 @@ import InfoBar from './components/InfoBar';
 import HomeButton from './components/HomeButton';
 import styled from 'styled-components';
 
+import SettingsScene from './scenes/Settings';
+// import PaytableScene from './scenes/Paytable';
+// import BetConsoleScene from './scenes/BetConsole';
+// import AutoPlayConsoleScene from './scenes/AutoPlayConsole';
+
 import bgImg from '../assets/loadingbg.jpg' // relative path to image
 
 
@@ -42,7 +47,13 @@ class App extends Component {
     render() {
         return (
             <ContainerDiv>
-                {/* <img src={bgImg}/> */}
+
+                <SettingsScene>
+                </SettingsScene>
+                {/* <PaytableScene></PaytableScene>
+                <BetConsoleScene></BetConsoleScene>
+                <AutoPlayConsoleScene></AutoPlayConsoleScene> */}
+
                 <MenuDrawer>
                 </MenuDrawer>
 
@@ -54,6 +65,7 @@ class App extends Component {
 
                 <InfoBar>
                 </InfoBar>
+
             </ContainerDiv>
         );
     }

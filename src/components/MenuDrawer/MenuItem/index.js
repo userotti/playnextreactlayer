@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import React, { Component } from 'react'
 
 const StyledMenuItem = styled.li`
+    cursor: pointer; 
     color: white;
     position:relative;
     float:left;

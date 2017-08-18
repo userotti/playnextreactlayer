@@ -5,9 +5,9 @@ import React, { Component } from 'react';
 const StyledInfoBar = styled.div`
     box-sizing: border-box;
     position: fixed;
-    background: rgba(0,0,0,0.5);
+    background: rgba(255,0,0,0.7);
     color: #eee;
-    z-index: 100;
+    z-index: 1;
     bottom: 0;
     left: 0;
     width: 100%;
