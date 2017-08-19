@@ -38,7 +38,7 @@ export default class SettingsScene extends Component {
             }
         } else {
             return {
-                x: spring(this.props.uiState.dimentions.width),
+                x: spring(this.props.uiState.dimensions.width),
                 alpha: spring(0)
             }
         }
@@ -56,8 +56,8 @@ export default class SettingsScene extends Component {
                                 this.closeScene();
                             }}>
                                 <SceneBackground style={{
-                                    width: `${this.props.uiState.dimentions.width}px`,
-                                    height: `${this.props.uiState.dimentions.height}px`,
+                                    width: `${this.props.uiState.dimensions.width}px`,
+                                    height: `${this.props.uiState.dimensions.height}px`,
 
                                     transform: `translate3d(${interpolatingStyle.x}px, 0, 0)`,
                                     WebkitTransform: `translate3d(${interpolatingStyle.x}px, 0, 0)`,

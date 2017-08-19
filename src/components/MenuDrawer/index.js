@@ -23,7 +23,8 @@ class CustomMenuDrawer extends Drawer {
 
 @connect((store)=>{
     return {
-        menuState: store.uiState.menuState
+
+        uiState: store.uiState
     };
 })
 class MenuDrawer extends Component {
@@ -36,7 +37,7 @@ class MenuDrawer extends Component {
 
     toggleMenu() {
 
-        this.props.dispatch(toggleMenuAndHideButtons(!this.props.menuState.menuOpen))
+        this.props.dispatch(toggleMenuAndHideButtons(!this.props.uiState.menuState.menuOpen))
 
     }
 
@@ -48,14 +49,16 @@ class MenuDrawer extends Component {
 
     render() {
 
-        const { menuState } = this.props;
+        console.log("this.props.uiState: ", this.props.uiState.dimensions.height - this.props.uiState.infoBarState.height )
+        const { menuState } = this.props.uiState;
         const drawerProps = {
-            overlayColor: "rgba(0,0,0,0.3)",
+            overlayColor: "rgba(0,0,0,0.2)",
             handleWidth: 0,
             drawerStyle: {
-                background: "rgba(0,0,0,0.8)",
-                boxShadow: "rgba(0, 0, 0, 0.188235) 0px 10px 20px, rgba(0, 0, 0, 0.227451) 0px 6px 6px",
-                'paddingRight': '0px'
+                background: "rgba(0,0,0,0.85)",
+                boxShadow: "5px 0px 10px rgba(0, 0, 0, 0.188235)",
+                'paddingRight': '0px',
+
             }
         };
 
@@ -63,6 +66,7 @@ class MenuDrawer extends Component {
 
             <CustomMenuDrawer
                 {...drawerProps}
+                height={this.props.uiState.dimensions.height - this.props.uiState.infoBarState.height + 'px'}
                 zIndex={2}
                 width={menuState.openWidth}
                 fadeOut={false}

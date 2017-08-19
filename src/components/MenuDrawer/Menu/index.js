@@ -6,12 +6,13 @@ import { menuItemTapped } from '../../../actions/uiStateActions'
 
 const StyledMenuList = styled.ul`
     list-style:none;
+    padding-left: 20px;
 `
 
 const StyledMenuItem = styled.li`
     cursor: pointer;
-    padding: 5px 10px;
-    margin-bottom: 10px;
+    padding: 5px 5px;
+    margin-bottom: 5px;
 
     font-size: 20px;
 `

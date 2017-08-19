@@ -15,11 +15,11 @@ import PaytableScene from './scenes/Paytable';
 // import BetConsoleScene from './scenes/BetConsole';
 // import AutoPlayConsoleScene from './scenes/AutoPlayConsole';
 
-import bgImg from '../assets/loadingbg.jpg' // relative path to image
+import bgImg from '../assets/scene-backgrounds/bgfruittile224x222.png' // relative path to image
 
 
 const ContainerDiv = styled.div`
-    width: 500px;
+    width: 100%;
     height: 100vh;
     background: url(${ bgImg })
 

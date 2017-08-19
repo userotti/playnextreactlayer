@@ -18,7 +18,7 @@ import playforrealpressed from '../../../assets/menu-icons/playforrealpressed.pn
 export default function reducer(state={
         menuOpen: false,
         showMenuButton: true,
-        openWidth: 300,
+        openWidth: 250,
         menuItems: [
             {
                 label: 'Games',

@@ -9,7 +9,7 @@ import { toggleMenuAndHideButtons } from '../../actions/uiStateActions';
 
 
 const StyledMenuButton = styled.div`
-    position: absolute;
+    position: fixed;
     cursor: pointer;
     font-size: 30px;
     background: #000;
@@ -17,7 +17,7 @@ const StyledMenuButton = styled.div`
     top: 0px;
     left: 0px;
     border-radius: 3px;
-    width: 100px;
+    width: 50px;
     height: 50px;
     text-align: center;
     line-height: 50px;

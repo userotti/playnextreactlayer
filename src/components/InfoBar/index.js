@@ -5,7 +5,7 @@ import React, { Component } from 'react';
 const StyledInfoBar = styled.div`
     box-sizing: border-box;
     position: fixed;
-    background: rgba(255,0,0,0.7);
+    background: rgba(0,0,0,0.7);
     color: #eee;
     z-index: 1;
     bottom: 0;
@@ -16,19 +16,32 @@ const StyledInfoBar = styled.div`
 `
 @connect((store)=>{
     return {
+        uiState: store.uiState,
         betModel: store.betModel
     };
 })
 export default class InfoBar extends Component {
 
     render() {
-        return (
 
-            <StyledInfoBar>
-                <span> bet amount: { this.props.betModel.betAmount }</span>
-            </StyledInfoBar>
+        console.log("this.props", this.props);
+        var divStyle = {
+          height: this.props.uiState.infoBarState.height + 'px' // 'ms' is the only lowercase vendor prefix
+        };
 
-        )
+        if (this.props.uiState.infoBarState.show) {
+            return (
+
+
+                <StyledInfoBar style={divStyle}>
+                    <span> bet amount: { this.props.betModel.betAmount }</span>
+                </StyledInfoBar>
+
+            )
+        } else {
+            return null;
+        }
+
     }
 
 }
