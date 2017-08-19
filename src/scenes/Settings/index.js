@@ -9,7 +9,7 @@ const SceneBackground = styled.div`
     position: fixed;
     left: 0;
     top: 0;
-    z-index: 3;
+    z-index: 2;
     background: #0000FF;
 `
 const StyledHeading = styled.h3`

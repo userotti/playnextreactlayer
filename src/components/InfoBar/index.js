@@ -7,12 +7,14 @@ const StyledInfoBar = styled.div`
     position: fixed;
     background: rgba(0,0,0,0.7);
     color: #eee;
-    z-index: 1;
+    z-index: 3;
     bottom: 0;
     left: 0;
     width: 100%;
-    padding: 20px;
+    padding: 5px 10px;
     text-align: right;
+    display: flex;
+    justify-content: space-between;
 `
 @connect((store)=>{
     return {
@@ -24,17 +26,15 @@ export default class InfoBar extends Component {
 
     render() {
 
-        console.log("this.props", this.props);
-        var divStyle = {
-          height: this.props.uiState.infoBarState.height + 'px' // 'ms' is the only lowercase vendor prefix
-        };
+
 
         if (this.props.uiState.infoBarState.show) {
             return (
 
 
-                <StyledInfoBar style={divStyle}>
-                    <span> bet amount: { this.props.betModel.betAmount }</span>
+                <StyledInfoBar>
+                    <span> Credits: { this.props.betModel.betAmount }</span>
+                    <span> Bet: { this.props.betModel.betAmount }</span>
                 </StyledInfoBar>
 
             )

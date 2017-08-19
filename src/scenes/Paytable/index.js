@@ -4,17 +4,29 @@ import React, { Component } from 'react'
 import { Motion, spring } from 'react-motion';
 import Hammer from 'react-hammerjs';
 import { togglePaytableSceneVisibility } from '../../actions/uiStateActions';
+import backButtonImg from '../../../assets/menu-icons/settingsBack.png' // relative path to image
+
 
 const SceneBackground = styled.div`
     position: fixed;
     left: 0;
     top: 0;
     z-index: 3;
-    background: #00FF00;
+    background: #000;
 `
 const StyledHeading = styled.h3`
     padding: 20px;
     color: #ffffff;
+`
+
+const BackButton = styled.div`
+    position: fixed;
+    left: 0px;
+    bottom: 100px;
+    width: 50px;
+    height: 50px;
+    background: url(${ backButtonImg }) no-repeat;
+    background-size: contain;
 `
 
 
@@ -51,10 +63,8 @@ export default class SettingsScene extends Component {
             <Motion style={this.getTransitionPos(this.props.uiState.paytableState.show)}>
                 {interpolatingStyle => {
                     return (
-                        <Hammer
-                            onClick={() => {
-                                this.closeScene();
-                            }}>
+
+
                                 <SceneBackground style={{
                                     width: `${this.props.uiState.dimensions.width}px`,
                                     height: `${this.props.uiState.dimensions.height}px`,
@@ -64,10 +74,20 @@ export default class SettingsScene extends Component {
                                     opacity: `${interpolatingStyle.alpha}`
                                 }}>
 
-                                    <StyledHeading> PAYTABLE Scene </StyledHeading>
+                                    <Hammer
+                                        onTap={() => {
+                                            this.closeScene();
+                                        }}>
+                                        <BackButton>
+                                        </BackButton>
+
+                                    </Hammer>
+
+                                    {/* <Paytables></Paytables> */}
 
                                 </SceneBackground>
-                        </Hammer>
+
+
                         )
                 }}
             </Motion>

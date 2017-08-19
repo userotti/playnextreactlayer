@@ -7,9 +7,10 @@ import Menu from './Menu';
 import Drawer from 'react-motion-drawer'
 
 
-const MenuHeading = styled.h2`
+const MenuHeading = styled.h3`
     color: white;
-    padding-left: 20px;
+    padding-left: 10px;
+    margin: 5px;
 `
 
 class CustomMenuDrawer extends Drawer {
@@ -66,8 +67,8 @@ class MenuDrawer extends Component {
 
             <CustomMenuDrawer
                 {...drawerProps}
-                height={this.props.uiState.dimensions.height - this.props.uiState.infoBarState.height + 'px'}
-                zIndex={2}
+                height={this.props.uiState.dimensions.height + 'px'}
+                zIndex={1}
                 width={menuState.openWidth}
                 fadeOut={false}
                 open={menuState.menuOpen}

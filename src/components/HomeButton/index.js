@@ -5,17 +5,17 @@ import { gotoHome  } from '../../actions/uiStateActions'
 
 const StyledHomeButton = styled.div`
     position: fixed;
-    font-size: 30px;
+    font-size: 25px;
     background: #000;
     color: #eee;
     border-radius: 3px;
     top: 0px;
     right: 0px;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     text-align: center;
-    line-height: 50px;
-    margin: 10px; 
+    line-height: 40px;
+    margin: 10px;
 
 `
 
