@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
 
-import uiState from "./uiStateReducer"
+import uiState from "./UiStateReducer"
 import betModel from "./betModelReducer"
 
 

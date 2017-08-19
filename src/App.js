@@ -19,7 +19,7 @@ import bgImg from '../assets/loadingbg.jpg' // relative path to image
 
 
 const ContainerDiv = styled.div`
-    width: 100%;
+    width: 500px;
     height: 100vh;
     background: url(${ bgImg })
 

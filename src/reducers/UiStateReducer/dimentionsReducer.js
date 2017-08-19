@@ -1,0 +1,16 @@
+export default function reducer(state={
+        width: window.innerWidth,
+        height: window.innerHeight,
+    }, action) {
+
+        switch (action.type) {
+            case "ON_RESIZE_EVENT":{
+                return {
+                    width: action.payload.width,
+                    height: action.payload.height,
+                }
+            }
+        }
+
+        return state
+}

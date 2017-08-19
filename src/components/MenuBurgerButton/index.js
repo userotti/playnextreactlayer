@@ -1,13 +1,15 @@
 import styled from 'styled-components';
 import { connect } from 'react-redux';
 import React, { Component } from 'react';
+import Hammer from 'react-hammerjs';
+
 import { setMenuDrawerState  } from '../../actions/uiStateActions';
 import { setHomeButtonVisibility  } from '../../actions/uiStateActions';
 import { toggleMenuAndHideButtons } from '../../actions/uiStateActions';
 
 
 const StyledMenuButton = styled.div`
-    position: fixed;
+    position: absolute;
     cursor: pointer;
     font-size: 30px;
     background: #000;
@@ -15,7 +17,7 @@ const StyledMenuButton = styled.div`
     top: 0px;
     left: 0px;
     border-radius: 3px;
-    width: 50px;
+    width: 100px;
     height: 50px;
     text-align: center;
     line-height: 50px;
@@ -43,13 +45,14 @@ export default class MenuBurgerButton extends Component {
     render() {
         if (this.props.menuState.showMenuButton) {
             return (
-                <StyledMenuButton
-                    onClick={() =>
-                        this.toggleMenu()
-                    }
-                    >
+                <Hammer onTap={() =>{
+                    this.toggleMenu()
+                }}>
+                    <StyledMenuButton>
                         <i class="fa fa-bars"></i>
-                </StyledMenuButton>
+                    </StyledMenuButton>
+                </Hammer>
+
             )
         } else {
             return null;
