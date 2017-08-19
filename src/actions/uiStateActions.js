@@ -45,6 +45,13 @@ export function toggleSettingsSceneVisibility(payload) {
     }
 }
 
+export function togglePaytableSceneVisibility(payload) {
+    return {
+        type: 'TOGGLE_PAYTABLE_SCENE_VISIBLE',
+        payload: payload
+    }
+}
+
 export function menuItemTapped(menuItemActionType, payload) {
     return {
         type: menuItemActionType,

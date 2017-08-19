@@ -10,7 +10,8 @@ import HomeButton from './components/HomeButton';
 import styled from 'styled-components';
 
 import SettingsScene from './scenes/Settings';
-// import PaytableScene from './scenes/Paytable';
+import PaytableScene from './scenes/Paytable';
+
 // import BetConsoleScene from './scenes/BetConsole';
 // import AutoPlayConsoleScene from './scenes/AutoPlayConsole';
 
@@ -48,8 +49,8 @@ class App extends Component {
         return (
             <ContainerDiv>
 
-                <SettingsScene>
-                </SettingsScene>
+                <SettingsScene></SettingsScene>
+                <PaytableScene></PaytableScene>
                 {/* <PaytableScene></PaytableScene>
                 <BetConsoleScene></BetConsoleScene>
                 <AutoPlayConsoleScene></AutoPlayConsoleScene> */}

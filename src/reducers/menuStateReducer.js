@@ -41,7 +41,7 @@ export default function reducer(state={
             },
             {
                 label: 'Paytable',
-                onTapActionType: 'GOTO_PAYTABLES_FROM_MENU',
+                onTapActionType: 'TOGGLE_PAYTABLE_SCENE_VISIBLE',
                 onTapActionPayload: true,
                 activeIconURL: paytableactive,
                 disabledIconURL: paytabledisabled,
