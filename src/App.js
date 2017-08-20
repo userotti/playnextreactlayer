@@ -19,7 +19,13 @@ import bgImg from '../assets/scene-backgrounds/bgfruittile224x222.png' // relati
 
 
 const ContainerDiv = styled.div`
-    background: url(${ bgImg })
+    overflow: hidden;
+    position: absolute;
+    background: url(${ bgImg });
+    bottom:0;
+    left:0;
+    top:0;
+    right: 0;
 `
 
 
