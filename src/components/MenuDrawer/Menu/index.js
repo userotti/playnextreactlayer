@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import { connect } from 'react-redux';
 import React, { Component } from 'react';
-import MenuItem from '../MenuItem';
 import { menuItemTapped } from '../../../actions/uiStateActions'
 
 const StyledMenuList = styled.ul`
