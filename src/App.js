@@ -19,10 +19,7 @@ import bgImg from '../assets/scene-backgrounds/bgfruittile224x222.png' // relati
 
 
 const ContainerDiv = styled.div`
-    width: 100%;
-    height: 100vh;
     background: url(${ bgImg })
-
 `
 
 

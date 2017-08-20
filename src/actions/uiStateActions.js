@@ -58,3 +58,31 @@ export function menuItemTapped(menuItemActionType, payload) {
         payload: payload
     }
 }
+
+export function paytableSceneSuccessfullyOpened(payload){
+    return {
+        type: 'PAYTABLE_SUCCESSFULLY_OPENED',
+        payload: payload
+    }
+}
+
+export function closePaytableScene(payload){
+    return {
+        type: 'CLOSE_PAYTABLE_SCENE',
+        payload: payload
+    }
+}
+
+export function movePaytableIndex(payload) {
+    return {
+        type: 'SET_PAYTABLE_POSITION_INDEX',
+        payload: payload
+    }
+}
+
+export function hidePaytableItems(payload) {
+    return {
+        type: 'HIDE_PAYTABLE_ITEMS',
+        payload: payload
+    }
+}

@@ -3,9 +3,10 @@ import { connect } from 'react-redux'
 import React, { Component } from 'react'
 import { Motion, spring } from 'react-motion';
 import Hammer from 'react-hammerjs';
-import { togglePaytableSceneVisibility } from '../../actions/uiStateActions';
-import backButtonImg from '../../../assets/menu-icons/settingsBack.png' // relative path to image
+import { togglePaytableSceneVisibility, paytableSceneSuccessfullyOpened, closePaytableScene } from '../../actions/uiStateActions';
 
+import backButtonImg from '../../../assets/menu-icons/settingsBack.png' // relative path to image
+import PaytablesCarousel from './components/PaytablesCarousel'
 
 const SceneBackground = styled.div`
     position: fixed;
@@ -13,6 +14,8 @@ const SceneBackground = styled.div`
     top: 0;
     z-index: 3;
     background: #000;
+    display: flex;
+    align-items: center;
 `
 const StyledHeading = styled.h3`
     padding: 20px;
@@ -20,6 +23,7 @@ const StyledHeading = styled.h3`
 `
 
 const BackButton = styled.div`
+    z-index: 5;
     position: fixed;
     left: 0px;
     bottom: 100px;
@@ -38,7 +42,7 @@ const BackButton = styled.div`
 export default class SettingsScene extends Component {
 
     closeScene() {
-        this.props.dispatch(togglePaytableSceneVisibility(!this.props.uiState.paytableState.show));
+        this.props.dispatch(closePaytableScene());
     }
 
     getTransitionPos(show) {
@@ -56,36 +60,47 @@ export default class SettingsScene extends Component {
         }
     }
 
+    paytableSceneOpenedOrClosed(show) {
+        if (show){
+            this.props.dispatch(paytableSceneSuccessfullyOpened());
+        } else {
+
+        }
+
+    }
+
     render() {
 
         return (
 
-            <Motion style={this.getTransitionPos(this.props.uiState.paytableState.show)}>
+            <Motion style={this.getTransitionPos(this.props.uiState.paytableState.show)} onRest={()=>{
+                this.paytableSceneOpenedOrClosed(this.props.uiState.paytableState.show)
+            }}>
                 {interpolatingStyle => {
                     return (
 
 
-                                <SceneBackground style={{
-                                    width: `${this.props.uiState.dimensions.width}px`,
-                                    height: `${this.props.uiState.dimensions.height}px`,
+                        <SceneBackground style={{
+                            width: `${this.props.uiState.dimensions.width}px`,
+                            height: `${this.props.uiState.dimensions.height}px`,
 
-                                    transform: `translate3d(${interpolatingStyle.x}px, 0, 0)`,
-                                    WebkitTransform: `translate3d(${interpolatingStyle.x}px, 0, 0)`,
-                                    opacity: `${interpolatingStyle.alpha}`
+                            transform: `translate3d(${interpolatingStyle.x}px, 0, 0)`,
+                            WebkitTransform: `translate3d(${interpolatingStyle.x}px, 0, 0)`,
+                            opacity: `${interpolatingStyle.alpha}`
+                        }}>
+
+                            <Hammer
+                                onTap={() => {
+                                    this.closeScene();
                                 }}>
+                                <BackButton>
+                                </BackButton>
 
-                                    <Hammer
-                                        onTap={() => {
-                                            this.closeScene();
-                                        }}>
-                                        <BackButton>
-                                        </BackButton>
+                            </Hammer>
 
-                                    </Hammer>
+                            <PaytablesCarousel></PaytablesCarousel>
 
-                                    {/* <Paytables></Paytables> */}
-
-                                </SceneBackground>
+                        </SceneBackground>
 
 
                         )

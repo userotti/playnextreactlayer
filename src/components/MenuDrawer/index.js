@@ -6,7 +6,6 @@ import { toggleMenuAndHideButtons } from '../../actions/uiStateActions'
 import Menu from './Menu';
 import Drawer from 'react-motion-drawer'
 
-
 const MenuHeading = styled.h3`
     color: white;
     padding-left: 10px;
@@ -50,7 +49,6 @@ class MenuDrawer extends Component {
 
     render() {
 
-        console.log("this.props.uiState: ", this.props.uiState.dimensions.height - this.props.uiState.infoBarState.height )
         const { menuState } = this.props.uiState;
         const drawerProps = {
             overlayColor: "rgba(0,0,0,0.2)",
