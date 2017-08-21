@@ -1,7 +1,7 @@
 {
-  "name": "react-motion-menu",
+  "name": "flits",
   "version": "1.0.0",
-  "description": "playing with react motion",
+  "description": "react and redux layer for html5 games",
   "main": "index.js",
   "scripts": {
     "dev": "./node_modules/.bin/webpack-dev-server --content-base src --inline --hot",
