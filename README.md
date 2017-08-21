@@ -27,12 +27,13 @@ Areas I'm trying to target are:
 
 1. Menus
 2. Menu overlays(settings, paytables)
-3. Bet and Autoplay consoles
-4. Bet, Autoplay, Spin, buttons
-5. Info bar
-6. betModel
-7. slotModel
-8. gameRepoModel
+3. Free Games
+4. Bet and Autoplay consoles
+5. Bet, Autoplay, Spin, buttons
+6. Info bar
+7. betModel
+8. slotModel
+9. gameRepoModel
 
 
 ## Credits
