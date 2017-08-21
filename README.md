@@ -5,11 +5,14 @@ A single store architecture using Redux combined with React to simplify our in g
 ## Installation
 npm install
 
+## Demo
+https://playnextreactlayer.firebaseapp.com
+
 ## Usage
 For development
 `npm run dev`
 
-For a demo link at: https://playnextreactlayer.firebaseapp.com
+Deploy to the demo link above:
 `npm run deploy`
 
 ## Contributing
