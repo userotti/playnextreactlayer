@@ -5,7 +5,7 @@ export default function reducer(state={
           {
             id: 'balance',
             label: 'Show Balance',
-            value: false,
+            value: true,
             disabled: false,
           },
           {
@@ -29,6 +29,16 @@ export default function reducer(state={
                     ...state,
                     coinsGame: action.payload,
                     creditsGame: !action.payload
+                    }
+            }
+
+            case "SET_SETTINGS_TOGGLE_VALUE":{
+                return {
+                    ...state,
+                    toggleSettings: state.toggleSettings.map(
+                         (content, i) => content.id === action.payload.setting.id ? {...content, value: action.payload.value}
+                                                 : content)
+
                     }
             }
 

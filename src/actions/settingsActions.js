@@ -5,6 +5,14 @@ export function selectCoinsGame(payload) {
     }
 }
 
+export function setSettingToggleValue(payload) {
+    return {
+        type: 'SET_SETTINGS_TOGGLE_VALUE',
+        payload: payload
+    }
+}
+
+
 export function setShowBalance(payload) {
     return {
         type: 'SET_SHOW_BALANCE_VALUE',
