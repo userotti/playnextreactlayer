@@ -2,14 +2,20 @@ import styled from 'styled-components';
 import { connect } from 'react-redux'
 import React, { Component } from 'react'
 import { toggleMenuAndHideButtons } from '../../actions/uiStateActions'
+import * as constants from '../../constants'
+
 
 import Menu from './Menu';
 import Drawer from 'react-motion-drawer'
 
-const MenuHeading = styled.h3`
+const MenuHeading = styled.span`
+    font-family: ${constants.fonts.default};
+    font-weight: 100;
+    font-size: 16px;
     color: white;
+    padding-top: 10px;
     padding-left: 10px;
-    margin: 5px;
+    display: inline-block;
 `
 
 class CustomMenuDrawer extends Drawer {

@@ -1,18 +1,19 @@
 import styled from 'styled-components';
 import { connect } from 'react-redux';
 import React, { Component } from 'react';
-import { menuItemTapped } from '../../../actions/uiStateActions'
+import { menuItemTapped } from '../../../actions/uiStateActions';
+import * as constants from '../../../constants';
 
 const StyledMenuList = styled.ul`
     list-style:none;
-    margin-top: 10px;
-    padding-left: 20px;
+    margin-top: 20px;
+    padding-left: 30px;
 `
 
 const StyledMenuItem = styled.li`
     cursor: pointer;
-    padding: 5px 5px;
-    margin-bottom: 5px;
+    padding: 5px 0px;
+    margin-bottom: 0px;
     font-size: 20px;
 `
 
@@ -21,22 +22,15 @@ const StyledMenuIcon = styled.div`
     vertical-align: middle;
     width: 30px;
     height: 30px;
+    margin-right: 20px;
     background: url(${(props)=>props.iconPath}) no-repeat;
     background-size: contain;
 `
-
-// const BackButton = styled.div`
-//     position: fixed;
-//     left: 0px;
-//     bottom: 100px;
-//     width: 50px;
-//     height: 50px;
-//     background: url(${ backButtonImg }) no-repeat;
-//     background-size: contain;
-// `
-
 const StyledLabel = styled.span`
-    color: #1FA4E2;
+    color: ${constants.colors.lightBlue};
+    font-family: ${constants.fonts.default};
+    font-weight: ligher;
+
     font-size: 16px;
 `
 

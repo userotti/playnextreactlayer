@@ -6,7 +6,6 @@
   "scripts": {
     "dev": "./node_modules/.bin/webpack-dev-server --content-base src --inline --hot",
     "deploy": "NODE_ENV=production ./node_modules/.bin/webpack && cp src/index.html public/index.html && cp src/client.min.js public/client.min.js && firebase deploy",
-
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -37,6 +36,7 @@
     "webpack-dev-server": "^1.14.1"
   },
   "devDependencies": {
+    "file-loader": "^0.11.2",
     "url-loader": "^0.5.9"
   }
 }

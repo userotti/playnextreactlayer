@@ -14,14 +14,14 @@ const StyledMenuButton = styled.div`
     font-size: 25px;
     background: #000;
     color: #eee;
-    top: 0px;
+    top: 50px;
     left: 0px;
     border-radius: 3px;
     width: 40px;
     height: 40px;
     text-align: center;
     line-height: 40px;
-    margin: 10px;
+    margin: 0px 10px;
 `
 
 @connect((store)=>{

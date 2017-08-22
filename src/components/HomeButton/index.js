@@ -9,14 +9,14 @@ const StyledHomeButton = styled.div`
     background: #000;
     color: #eee;
     border-radius: 3px;
-    top: 0px;
+    top: 50px;
     right: 0px;
     width: 40px;
     height: 40px;
     text-align: center;
     line-height: 40px;
-    margin: 10px;
-
+    margin: 0px 10px;
+    z-index: 6;
 `
 
 @connect((store)=>{
