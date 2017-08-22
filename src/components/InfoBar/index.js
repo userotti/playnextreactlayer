@@ -6,7 +6,7 @@ import * as constants from '../../constants';
 const StyledInfoBar = styled.div`
     box-sizing: border-box;
     position: fixed;
-    background: rgba(0,0,0,0.7);
+    background: rgba(0,0,0,0.5);
     color: #eee;
     z-index: 3;
     bottom: 0;

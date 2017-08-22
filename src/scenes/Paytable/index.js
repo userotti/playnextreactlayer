@@ -5,7 +5,7 @@ import { Motion, spring } from 'react-motion';
 import Hammer from 'react-hammerjs';
 import { togglePaytableSceneVisibility, paytableSceneSuccessfullyOpened, closePaytableScene } from '../../actions/uiStateActions';
 
-import backButtonImg from '../../../assets/menu-icons/settingsBack.png' // relative path to image
+import backButtonImg from '../../../assets/ui/navigation/settingsBack.png' // relative path to image
 import PaytablesCarousel from './components/PaytablesCarousel'
 
 const SceneBackground = styled.div`

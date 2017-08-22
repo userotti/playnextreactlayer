@@ -7,21 +7,21 @@ export function selectCoinsGame(payload) {
 
 export function setShowBalance(payload) {
     return {
-        type: 'SET_SHOW_BALANCE',
+        type: 'SET_SHOW_BALANCE_VALUE',
         payload: payload
     }
 }
 
 export function setSoundsActive(payload) {
     return {
-        type: 'SET_SOUNDS_ACTIVE',
+        type: 'SET_SOUND_ACTIVE_VALUE',
         payload: payload
     }
 }
 
 export function setQuickspinActive(payload) {
     return {
-        type: 'SET_QUICKSPIN_ACTIVE',
+        type: 'SET_QUICKSPIN_VALUE',
         payload: payload
     }
 }

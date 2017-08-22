@@ -73,7 +73,7 @@ const CreditsButton = styled.span`
         settings: store.settings
     };
 })
-export default class SettingsScene extends Component {
+export default class CoinsCreditsPills extends Component {
 
     selectCoinsGame(coinsGame) {
       this.props.dispatch(selectCoinsGame(coinsGame));

@@ -4,9 +4,10 @@ import React, { Component } from 'react'
 import { Motion, spring } from 'react-motion';
 import Hammer from 'react-hammerjs';
 import { toggleSettingsSceneVisibility } from '../../actions/uiStateActions';
-import backButtonImg from '../../../assets/menu-icons/settingsBack.png' // relative path to image
+import backButtonImg from '../../../assets/ui/navigation/settingsBack.png' // relative path to image
 import * as constants from '../../constants' // relative path to image
 import CoinsCreditsPills from './components/CoinsCreditsPills' // relative path to image
+import TickboxSettings from './components/TickboxSettings' // relative path to image
 
 
 const SceneBackground = styled.div`
@@ -95,6 +96,9 @@ export default class SettingsScene extends Component {
 
                                 <CoinsCreditsPills>
                                 </CoinsCreditsPills>
+
+                                <TickboxSettings>
+                                </TickboxSettings>
 
 
                             </SettingsContainer>
